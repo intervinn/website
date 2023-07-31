@@ -8,9 +8,11 @@ interface ReferenceProps {
 
 const ReferenceItem : React.FC<ReferenceProps> = ({image, label, href}) => {
     return (
-        <div className="h-fit w-fit flex flex-row items-center justify-center">
-            <img className="w-20 h-20" src={image}/>
-            <a className="text-white font-mono text-xl" href={href}>{label}</a>
+        <div className="h-fit w-fit flex flex-row justify-start">
+            <a href={href}>
+                <img className="w-20 h-20" src={image}/>
+                <span className="text-white font-mono text-xl">{label}</span>
+            </a>
         </div>
     )
 }
